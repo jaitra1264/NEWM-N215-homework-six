@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url("../fonts/Proxima-Nova-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  color: $site-black-text-color;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Proxima Nova Thin", sans-serif;
+}
+
+.app {
+  flex: 1;
+}
+
+.site-footer {
+  background-color: $footer-bg-color;
+  color: $site-white-text-color;
+}
+
+.site-footer .footer-inner {
+  max-width: $nav-content-max-width;
+  margin: 0 auto;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.site-footer .logo {
+  border: 2px solid $site-white-text-color;
+  padding: 0px 0px 0 0;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 40px;
+  width: 83.5px;
+  .nav-logo-text {
+    position: relative;
+    top: 4px;
+    left: -1px;
+  }
+}
+
+.site-footer .footer-copy {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.site-footer .footer-social a {
+  color: $site-white-text-color;
+  margin-left: 12px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .site-footer .footer-inner {
+    height: auto;
+    padding: 16px 20px 20px;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+  }
+
+  .site-footer .footer-social a {
+    margin: 0 8px;
+  }
+}

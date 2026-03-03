@@ -1,0 +1,131 @@
+.site-nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $site-white-text-color;
+}
+
+.site-nav .nav-inner {
+  max-width: $nav-content-max-width;
+  height: $nav-height;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.site-nav .logo {
+  border: 2px solid $site-white-text-color;
+  padding: 0px 0px 0 0;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 40px;
+  width: 83.5px;
+  .nav-logo-text {
+    position: relative;
+    top: 4px;
+    left: -1px;
+  }
+}
+
+.site-nav .nav-links a {
+  color: $site-white-text-color;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-left: 0;
+  padding: 4px 0;
+  position: relative;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.site-nav .nav-links a + a::before {
+  content: "|";
+  margin-right: 18px;
+  color: $footer-bg-color;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.site-nav .nav-rule {
+  max-width: $nav-content-max-width;
+  margin: 0 auto;
+  height: 1px;
+  background-color: $nav-rule-color;
+}
+
+// Light variant — used on pages without a hero image
+.site-nav--light {
+  position: relative;
+  color: $site-black-text-color;
+
+  .logo {
+    border-color: $site-black-text-color;
+  }
+
+  .nav-links a {
+    color: $site-black-text-color;
+  }
+
+  .nav-links a + a::before {
+    color: $footer-bg-color;
+  }
+
+  .nav-rule {
+    background-color: $heading-black-underline-color;
+    height: 2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-nav .nav-links a {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .site-nav .nav-links {
+    gap: 14px;
+  }
+
+  .site-nav .nav-rule {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav .nav-inner {
+    height: auto;
+    padding: 16px 20px 14px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+  }
+
+  .site-nav .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  .site-nav .nav-links a {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}

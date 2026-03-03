@@ -1,0 +1,151 @@
+// Individual tour detail page styles
+
+.tour-detail {
+  .tour-detail-hero {
+    max-width: $nav-content-max-width;
+    margin: 30px auto 0;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 40px;
+    color: $site-white-text-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    }
+
+    h1 {
+      font-family: inherit;
+      font-size: 38px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tour-price {
+      font-family: "Proxima Nova Thin", sans-serif;
+      font-size: 18px;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: right;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  .tour-detail-content {
+    max-width: $nav-content-max-width;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+
+  .tour-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+    margin-bottom: 40px;
+
+    img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .tour-day {
+    margin-bottom: 40px;
+
+    h2 {
+      font-family: inherit;
+      font-size: 32px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 4px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $heading-black-underline-color;
+      display: inline-block;
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 17px;
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  .tour-book {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+// Tour detail responsive
+@media (max-width: 900px) {
+  .tour-detail {
+    .tour-detail-hero {
+      margin: 30px 20px 0;
+      height: 260px;
+      padding: 24px 30px;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .tour-price {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .tour-detail {
+    .tour-detail-hero {
+      height: 220px;
+      margin: 20px 16px 0;
+      padding: 20px 20px;
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .tour-price {
+        font-size: 14px;
+      }
+    }
+
+    .tour-detail-content {
+      padding: 20px 16px 40px;
+    }
+
+    .tour-gallery {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .tour-day h2 {
+      font-size: 26px;
+    }
+  }
+}
